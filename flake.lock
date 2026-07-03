@@ -580,11 +580,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1783077493,
-        "narHash": "sha256-oughNtavihPUBe+9LzFftW3FoYaocYhAM8EVKLaGBYM=",
+        "lastModified": 1783078854,
+        "narHash": "sha256-V879jTX0unmrEqv5ddzbakjeQjMT6TmaHTd+0/GGcOs=",
         "owner": "Mic92",
         "repo": "tribuchet",
-        "rev": "bf9370e640d9b64539a16be82c067aae7346e2e4",
+        "rev": "494de79875ed129e93d2bc8602f40980e3db2f26",
         "type": "github"
       },
       "original": {
