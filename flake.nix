@@ -60,8 +60,9 @@
     tincr.inputs.crane.follows = "crane";
 
     tribuchet.url = "github:Mic92/tribuchet/build-fix";
-    tribuchet.inputs.nixpkgs.follows = "nixpkgs";
     tribuchet.inputs.crane.follows = "crane";
+    tribuchet.inputs.nixpkgs.follows = "nixpkgs";
+    tribuchet.inputs.treefmt-nix.follows = "treefmt-nix";
 
     srvos.url = "github:numtide/srvos";
     # actually not used when using the modules but than nothing ever will try to fetch this nixpkgs variant
