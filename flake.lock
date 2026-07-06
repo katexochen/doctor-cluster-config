@@ -195,10 +195,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1780404819,
-        "narHash": "sha256-ByM0l0eZByUMzf9lzVE9j3RDtYqb8Dp3EMeWDhc+zDY=",
+        "lastModified": 1783333684,
+        "narHash": "sha256-s+0glGnUOz7Y5v7rYuYRFYdd1Pv/qWzmj+Mxu3zdjrU=",
         "ref": "no-overlay",
-        "rev": "111f61a5c17af4d2769681c83a10d191ef2cc15b",
+        "rev": "8714882ef563df77c99ae574d1bc7628d9440b50",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/TUM-DSE/jetpack-nixos.git"
@@ -326,15 +326,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1783263778,
-        "narHash": "sha256-aUq84JL8KL+BRZICg8mPGyepkz3oei6XWEwYqOpyMhM=",
+        "lastModified": 1783336777,
+        "narHash": "sha256-4qAtBEgZU+g5gF7AGGo6bAV5oR+iotdRgok/sceAIwA=",
         "owner": "Mic92",
         "repo": "nixbot",
-        "rev": "909f18127b583702aabaeb74d29891096f971f49",
+        "rev": "6aff97dd8d6762a3be2810689d14bed98a6488f0",
         "type": "github"
       },
       "original": {
         "owner": "Mic92",
+        "ref": "scheduler-perf",
         "repo": "nixbot",
         "type": "github"
       }
@@ -405,10 +406,10 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1780405895,
-        "narHash": "sha256-jJDGhYAriet7RA6OPqAgLZ0IK/+rNbCi2j4BUXPlWfc=",
+        "lastModified": 1783336023,
+        "narHash": "sha256-2jSdfozltXxD+3zibuRT14m0Q4FrPlsqFMYY7HiouS4=",
         "ref": "nixos-26.05-backports",
-        "rev": "c33606e163dc55e985b1ec9a87a22694a081da47",
+        "rev": "21033b66851dc248cdaaa1b1adae5a200cb1635a",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/TUM-DSE/nixpkgs.git"
