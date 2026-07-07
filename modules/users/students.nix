@@ -544,7 +544,7 @@ in
     };
 
     # Marc, Student internship working w/ David (can be removed after Sep 2026)
-    kilian = {
+    marc = {
       isNormalUser = true;
       home = "/home/marc";
       inherit extraGroups;
