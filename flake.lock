@@ -195,10 +195,10 @@
         ]
       },
       "locked": {
-        "lastModified": 1780404819,
-        "narHash": "sha256-ByM0l0eZByUMzf9lzVE9j3RDtYqb8Dp3EMeWDhc+zDY=",
+        "lastModified": 1783333684,
+        "narHash": "sha256-s+0glGnUOz7Y5v7rYuYRFYdd1Pv/qWzmj+Mxu3zdjrU=",
         "ref": "no-overlay",
-        "rev": "111f61a5c17af4d2769681c83a10d191ef2cc15b",
+        "rev": "8714882ef563df77c99ae574d1bc7628d9440b50",
         "shallow": true,
         "type": "git",
         "url": "https://github.com/TUM-DSE/jetpack-nixos.git"
