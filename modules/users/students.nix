@@ -587,7 +587,6 @@ in
     "justusvonderbeek"
     "kai"
     "kamilk"
-    "kilian"
     "konrad"
     "konradH"
     "konstantin"
