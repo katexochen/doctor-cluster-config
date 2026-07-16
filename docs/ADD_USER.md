@@ -2,6 +2,8 @@
 
 Applies to students, chair members and reviewers.
 
+**Note**: internally hired employees (that previously studied at TUM) need a chair admin to manually change affiliation to our chair for accessing our VPN and Xerox printers ("Änderung der Zugehörigkeit (oder Status) beantragen" for a user in strukturdb)
+
 ## 1. Pick file and uid
 
 | Who | File | uid range |
