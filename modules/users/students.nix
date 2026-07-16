@@ -1,4 +1,4 @@
-{ configs, pkgs, ... }:
+{ ... }:
 let
   sandraKeys = [
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGNAM728FNAtQhvAih1kirZszXRISD4wI+yxoifgRH1C sandras@tum.de"
@@ -486,7 +486,7 @@ in
       isNormalUser = true;
       home = "/home/ivanl";
       inherit extraGroups;
-      shell = pkgs.zsh;
+      shell = "/run/current-system/sw/bin/zsh";
       uid = 2106;
       allowedHosts = [
         "xavier"
