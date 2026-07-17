@@ -1,5 +1,22 @@
 {
   "nodes": {
+    "coyote": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1783057848,
+        "narHash": "sha256-+TTF9jS+g0fuXTxfDmhrTvOowuxRtm/dae/PfjfQBBk=",
+        "owner": "fpgasystems",
+        "repo": "Coyote",
+        "rev": "9c00353a474ad78ddafae7506c2d08461f6b6d1a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "fpgasystems",
+        "repo": "Coyote",
+        "rev": "9c00353a474ad78ddafae7506c2d08461f6b6d1a",
+        "type": "github"
+      }
+    },
     "crane": {
       "locked": {
         "lastModified": 1781825982,
@@ -444,6 +461,7 @@
     },
     "root": {
       "inputs": {
+        "coyote": "coyote",
         "crane": "crane",
         "disko": "disko",
         "fast-nix-gc": "fast-nix-gc",
