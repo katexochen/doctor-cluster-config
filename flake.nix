@@ -83,11 +83,8 @@
     flake-registry.url = "github:NixOS/flake-registry";
     flake-registry.flake = false;
 
-    # Coyote source pinned to the required commit.
-    coyote = {
-      url = "github:fpgasystems/Coyote/9c00353a474ad78ddafae7506c2d08461f6b6d1a";
-      flake = false;
-    };
+    coyote.url = "github:fpgasystems/Coyote/9c00353a474ad78ddafae7506c2d08461f6b6d1a";
+    coyote.flake = false;
   };
 
   outputs =
