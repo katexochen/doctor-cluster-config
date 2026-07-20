@@ -486,7 +486,7 @@ in
       isNormalUser = true;
       home = "/home/ivanl";
       inherit extraGroups;
-      shell = "/run/current-system/sw/bin/bash";
+      shell = "/run/current-system/sw/bin/zsh";
       uid = 2106;
       allowedHosts = [
         "xavier"
