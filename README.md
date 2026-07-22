@@ -1,5 +1,10 @@
-The documenation for all hosts lives in [docs/](docs/). 
-The corresponding nixos configuration is in [hosts/](hosts/).
+The documenation for all hosts lives in [docs/](docs/). The corresponding nixos configuration is in [hosts/](hosts/).
+
+Live cluster monitoring is at [grafana.dos.cit.tum.de](https://grafana.dos.cit.tum.de):
+
+- **DSE-Monitoring** — host reachability & backups
+- **DSE-FPGA** — FPGA cards status
+- **DSE-Switch** — ToR switch port state
 
 # New to NixOS?
 
