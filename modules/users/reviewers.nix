@@ -17,6 +17,32 @@ in {
       openssh.authorizedKeys.keys = ["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAxgj1VQLrGGVRVwk4wEw3t13Yx0BuslofrZYqGYEngd gergonemeth"];
       expires = "2026-08-01";
     };
+
+    btbferret1 = {
+      isNormalUser = true;
+      home = "/home/btbferret1";
+      shell = "/run/current-system/sw/bin/bash";
+      uid = 4009;
+      inherit extraGroups;
+      allowedHosts = [
+        "jamie"
+      ];
+      openssh.authorizedKeys.keys = ["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPJg3dQSL7NXMBTWxOYvoecR65Qo/TCpC1e5Pd8VlB5T btbferret1"];
+      expires = "2026-09-01";
+    };
+
+    btbferret2 = {
+      isNormalUser = true;
+      home = "/home/btbferret2";
+      shell = "/run/current-system/sw/bin/bash";
+      uid = 4010;
+      inherit extraGroups;
+      allowedHosts = [
+        "jamie"
+      ];
+      openssh.authorizedKeys.keys = ["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGfmK0t9PXFJ+NhSQ4r0biriq7f+694olUQrl4sVb7Qy btbferret2"];
+      expires = "2026-09-01";
+    };
 };
 
   # DANGER ZONE!
