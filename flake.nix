@@ -26,7 +26,7 @@
     treefmt-nix.url = "github:numtide/treefmt-nix";
     treefmt-nix.inputs.nixpkgs.follows = "nixpkgs";
 
-    nixbot.url = "github:Mic92/nixbot";
+    nixbot.url = "github:Mic92/nixbot/scheduler-perf";
     nixbot.inputs.nixpkgs.follows = "nixpkgs";
     nixbot.inputs.treefmt-nix.follows = "treefmt-nix";
 
@@ -59,9 +59,10 @@
     tincr.inputs.treefmt-nix.follows = "treefmt-nix";
     tincr.inputs.crane.follows = "crane";
 
-    tribuchet.url = "github:Mic92/tribuchet/build-fix";
-    tribuchet.inputs.nixpkgs.follows = "nixpkgs";
+    tribuchet.url = "github:Mic92/tribuchet";
     tribuchet.inputs.crane.follows = "crane";
+    tribuchet.inputs.nixpkgs.follows = "nixpkgs";
+    tribuchet.inputs.treefmt-nix.follows = "treefmt-nix";
 
     srvos.url = "github:numtide/srvos";
     # actually not used when using the modules but than nothing ever will try to fetch this nixpkgs variant
@@ -81,6 +82,9 @@
 
     flake-registry.url = "github:NixOS/flake-registry";
     flake-registry.flake = false;
+
+    coyote.url = "github:fpgasystems/Coyote/9c00353a474ad78ddafae7506c2d08461f6b6d1a";
+    coyote.flake = false;
   };
 
   outputs =
