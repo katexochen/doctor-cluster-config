@@ -21,12 +21,13 @@ PORT_LABELS = {
     "100ge1/0/7":  "Amy E810",
     "100ge1/0/8":  "Clara E810",
     "100ge1/0/9":  "Rose U280 FPGA",
-    "100ge1/0/11": "Clara FPGA",
-    "100ge1/0/12": "Amy FPGA",
+    "100ge1/0/10": "Momiji U280 FPGA",
+    "100ge1/0/11": "Clara U280 FPGA",
+    "100ge1/0/12": "Amy U280 FPGA",
     "100ge1/0/15": "Rose V80 FPGA",
     "100ge1/0/16": "Rose E810",
-    "10ge1/0/33":  "Amy Broadcom",
-    "10ge1/0/34":  "Clara Broadcom",
+    "10ge1/0/33":  "Amy Broadcom 10G",
+    "10ge1/0/34":  "Clara Broadcom 10G",
 }
 
 
@@ -253,6 +254,10 @@ def write_metrics(ports, port_details, port_configs):
     lines.append("# TYPE switch_port_input_rate_bps gauge")
     lines.append("# HELP switch_port_output_rate_bps Port output rate in bits per second")
     lines.append("# TYPE switch_port_output_rate_bps gauge")
+    lines.append("# HELP switch_port_fec_mode FEC mode (0=none, 1=rs, 2=fc)")
+    lines.append("# TYPE switch_port_fec_mode gauge")
+    lines.append("# HELP switch_port_flow_enabled Flow control (0=disabled, 1=enabled)")
+    lines.append("# TYPE switch_port_flow_enabled gauge")
 
     for port in ports:
         iface = port["interface"]
@@ -288,10 +293,20 @@ def write_metrics(ports, port_details, port_configs):
             lines.append(f"switch_port_speed_mbps{{{slim_labels}}} {detail['speed_mbps']}")
         if "vlan" in detail:
             lines.append(f"switch_port_vlan{{{slim_labels}}} {detail['vlan']}")
+        elif cfg.get("vlan"):
+            # Fall back to configured VLAN from running-config for down ports.
+            lines.append(f"switch_port_vlan{{{slim_labels}}} {cfg['vlan']}")
         if "input_rate_bps" in detail:
             lines.append(f"switch_port_input_rate_bps{{{slim_labels}}} {detail['input_rate_bps']}")
         if "output_rate_bps" in detail:
             lines.append(f"switch_port_output_rate_bps{{{slim_labels}}} {detail['output_rate_bps']}")
+
+        # Numeric FEC/Flow metrics for dashboard display via value mappings.
+        # Value 0 is always the "off/none" case so tiles look neutral by default.
+        fec_map  = {"none": 0, "rs": 1, "fc": 2}
+        flow_map = {"disabled": 0, "enabled": 1}
+        lines.append(f"switch_port_fec_mode{{{slim_labels}}} {fec_map.get(cfg.get('fec', 'none'), 0)}")
+        lines.append(f"switch_port_flow_enabled{{{slim_labels}}} {flow_map.get(cfg.get('flow_control', 'disabled'), 0)}")
 
     content = "\n".join(lines) + "\n"
 

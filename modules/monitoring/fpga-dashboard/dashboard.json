@@ -147,6 +147,138 @@
     {
       "fieldConfig": {
         "defaults": {
+          "mappings": [
+            {
+              "options": {
+                "0": {
+                  "color": "yellow",
+                  "text": "NOT BOUND"
+                },
+                "1": {
+                  "color": "green",
+                  "text": "BOUND"
+                },
+                "2": {
+                  "color": "red",
+                  "text": "CRASHED"
+                }
+              },
+              "type": "value"
+            }
+          ],
+          "thresholds": {
+            "steps": [
+              {
+                "color": "yellow",
+                "value": null
+              },
+              {
+                "color": "green",
+                "value": 1
+              },
+              {
+                "color": "red",
+                "value": 2
+              }
+            ]
+          }
+        }
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 6,
+        "y": 1
+      },
+      "id": 26,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ]
+        },
+        "text": {
+          "titleSize": 12,
+          "valueSize": 22
+        },
+        "textMode": "value"
+      },
+      "targets": [
+        {
+          "expr": "server_fpga_driver_status{host=\"Clara\",fpga=\"V80\"}",
+          "legendFormat": ""
+        }
+      ],
+      "title": "V80 Driver",
+      "type": "stat"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {
+          "thresholds": {
+            "steps": [
+              {
+                "color": "dark-blue",
+                "value": null
+              },
+              {
+                "color": "yellow",
+                "value": 1
+              }
+            ]
+          },
+          "noValue": "NOT USED"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 3,
+        "x": 9,
+        "y": 1
+      },
+      "id": 38,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ]
+        },
+        "text": {
+          "titleSize": 12,
+          "valueSize": 22
+        },
+        "textMode": "name"
+      },
+      "targets": [
+        {
+          "expr": "server_fpga_user_info{host=\"Clara\",fpga=\"V80\"}",
+          "format": "time_series",
+          "instant": true,
+          "legendFormat": "{{user}}",
+          "refId": "A"
+        },
+        {
+          "expr": "server_fpga_in_use{host=\"Clara\",fpga=\"V80\"} == 0",
+          "format": "time_series",
+          "instant": true,
+          "legendFormat": "NOT USED",
+          "refId": "B"
+        }
+      ],
+      "title": "V80 User",
+      "transformations": [],
+      "type": "stat"
+    },
+    {
+      "fieldConfig": {
+        "defaults": {
           "decimals": 2,
           "max": 100,
           "min": 0,
@@ -171,8 +303,8 @@
       },
       "gridPos": {
         "h": 4,
-        "w": 5,
-        "x": 6,
+        "w": 3,
+        "x": 12,
         "y": 1
       },
       "id": 2,
@@ -218,8 +350,8 @@
       },
       "gridPos": {
         "h": 4,
-        "w": 5,
-        "x": 11,
+        "w": 3,
+        "x": 15,
         "y": 1
       },
       "id": 3,
@@ -289,7 +421,7 @@
       "gridPos": {
         "h": 4,
         "w": 3,
-        "x": 16,
+        "x": 18,
         "y": 1
       },
       "id": 35,
@@ -333,8 +465,8 @@
       },
       "gridPos": {
         "h": 4,
-        "w": 5,
-        "x": 19,
+        "w": 3,
+        "x": 21,
         "y": 1
       },
       "id": 4,
