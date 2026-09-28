@@ -302,11 +302,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1790194069,
-        "narHash": "sha256-W/2TWWcOF439X2mysprP76lFSmvc+RYM9DWPJdTtYVs=",
+        "lastModified": 1790199138,
+        "narHash": "sha256-KqiBnE998ddiNFMbUEQ2Rg4TLvYz8FK4WnUPqDN3Sis=",
         "owner": "krebs",
         "repo": "kartei",
-        "rev": "2816cd0a67305a36ed4111163559511b07726a79",
+        "rev": "f8f5d0fec3f2b8e38f7ae5996d94bbfc409a2d63",
         "type": "github"
       },
       "original": {
@@ -453,11 +453,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1788335262,
-        "narHash": "sha256-3jBEq8avfzlrsY4UpW4d5TOmm7ocseZfnitEJhqauyc=",
+        "lastModified": 1789978172,
+        "narHash": "sha256-FIRXajv1pPZ+l6On6ekkmcQ6le0Zi0ncRUoR3nB0vKA=",
         "owner": "NixOS",
         "repo": "nixos-hardware",
-        "rev": "44d95795ee2d475b3d687325e26dcf4ca9104557",
+        "rev": "9ebcb7766700d7e006d9505247bd7ce0426f4232",
         "type": "github"
       },
       "original": {
@@ -713,11 +713,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1788760924,
-        "narHash": "sha256-xF+vezuLTX6ZJOWpYRZBk8LOlvbMklPTJGC78iGleeM=",
+        "lastModified": 1789937010,
+        "narHash": "sha256-JRCK0iDoJUYYk+pLpHKXhQo3aHkLJol4O4ZY+HPmpNA=",
         "owner": "Mic92",
         "repo": "zfs-dedup",
-        "rev": "a0f2ff667c2b45d766677255a847fe8820d8e144",
+        "rev": "5020b6a3dd595da320220047d8d9eef0b055f19b",
         "type": "github"
       },
       "original": {
