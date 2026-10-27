@@ -50,6 +50,7 @@ let
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBzLGDgXaT6+pWNDa5UazUO2RAvlWwkrGLNiWHSy+dkp"
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBovteXjmdsqJ432B4rZillIjnfe7Sx2LhfMg2WtkAks"
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAIW6vfXtJDp7/ZehGQbjOfMXio4Ojjr7xU5YkN31PSi"
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAICaHIm3OU6aSahWlN5uN8MqoYQFx2s1KBJMqsp7zKgV1"
   ];
 
   franciscoKeys = [
@@ -126,6 +127,10 @@ let
 
   ilgazKeys = [
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHd8sv/lztuBI59iI5Pp4P6P/K0TkK9GyN8hS045pyK+ ilgaz@ilgazs-MacBook-Air.local"
+  ];
+
+  achretoKeys = [
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBz7oC0k49ZIFNxupIWDkYH89RCjen7LzmF75cn33P2Z achreto@reto-ethernet.dos.cit.tum.de"
   ];
 
   extraGroups = [
@@ -436,7 +441,16 @@ in
         openssh.authorizedKeys.keys = ilgazKeys;
       };
 
-
+      # Reto Achermann
+      achreto = {
+        isNormalUser = true;
+        home = "/home/achreto";
+        inherit extraGroups;
+        shell = "/run/current-system/sw/bin/zsh";
+        uid = 2008;
+        allowedHosts = [ "all" ];
+        openssh.authorizedKeys.keys = achretoKeys;
+      };
 
       # add staff to root account as well
       root.openssh.authorizedKeys.keys =
